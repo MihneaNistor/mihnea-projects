@@ -30,12 +30,13 @@
 .menu li {
   margin-top: 2.5em;
   float: left;
-  padding-right: 6em;
+  padding-right: 4em;
   transition: 0.2s;
 }
 
 .menu li a {
-  font-size: 2.7vh;
+  //font-size: 2.7vh;
+  font-size: 1.6em;
   position: relative;
   display: block;
   color: white;
@@ -121,17 +122,22 @@
   //margin-bottom: 1em;
 }
 
-.title{
+.title {
   letter-spacing: 0.6em;
   text-align: center;
-  font-size: 3vh;
+  //font-size: 3vh;
+  //font-size: 35px;
+  font-size: 2em;
   color: #E5E4E2;
   padding-top: 7em;
   opacity: 0.8;
 }
 
 .title h3 {
-  font-size: 2.2vh;
+  //font-size: 2.2vh;
+  //font-size: 20px;
+  font-size: .8em;
+
 }
 
 .header img {
@@ -183,14 +189,17 @@
 }
 
 .description p {
-  font-size: 3.5vh;
+  //font-size: 3.5vh;
+  font-size: 2.1em;
   padding: 1.2em 1em;
-  line-height: 65px;
+  //line-height: 65px;
+  line-height: 2em;
   color: #E5E4E2;
 }
 
 .description button {
-  font-size: 1.8vh;
+  //font-size: 1.8vh;
+  font-size: 1.1em;
   color: #E5E4E2;
   font-weight: bold;
   background: inherit;
@@ -240,11 +249,10 @@ h1 {
   margin: 1em auto;
   margin-bottom: 3em;
   text-align: center;
-  font-size: 5vh;
-   /* background: -webkit-linear-gradient(-90deg, #A43931, #1D4350);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent; */
-   color: #E5E4E2;
+  //font-size: 5vh;
+  font-size: 3.2em;
+  color: #E5E4E2;
+  letter-spacing: 3px;
 }
 
 .skill-bar {
@@ -283,7 +291,8 @@ h1 {
   justify-content: center;
   gap: 5em;
   text-align: center;
-  font-size: 2.7vh;
+  //font-size: 2.7vh;
+  font-size: 1.6em;
   color: #E5E4E2;
   margin-bottom: 5em;
 }
@@ -291,10 +300,10 @@ h1 {
 .col i {
   color: #E5E4E2;
   opacity: 0.5;
-  width: 70px;
+  width: 2.7em;
   border: 5px solid #E5E4E2;
   border-radius: 50%;
-  padding: 15px;
+  padding: .65em;
   position: relative;
   top: 0;
   transition: top ease 0.8s;
@@ -320,7 +329,8 @@ h1 {
 
 .footer p {
   text-align: center;
-  font-size: 2vh;
+  //font-size: 2vh;
+  font-size: 1.4em;
   color: #E5E4E2;
 }
 
@@ -357,9 +367,11 @@ h1 {
   .contact {
     gap: 3em;
     margin: 0 2em;
-
   }
 
+  .skill-bar {
+    width: 50%;
+  }
   h1 {
     margin-bottom: 1.5em;
   }
@@ -394,5 +406,38 @@ h1 {
 
   .title {
     padding-top: 6em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hamburger{
+    margin-left: 1em;
+  }
+
+  .description {
+    margin: 10em .5em 2em .5em;
+  }
+
+  .description p {
+    padding: .5em;
+    line-height: 1.7em;
+  }
+
+  .webimg {
+    max-width: 80%;
+  }
+
+  .footer {
+    width: 95%;;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header img {
+    left: 3%;
+  }
+
+  .title {
+    padding-top: 1.7em;
   }
 }

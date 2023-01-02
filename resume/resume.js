@@ -1,13 +1,5 @@
 const menu = document.querySelector(".menu");
 const menuItems = menu.getElementsByTagName("li");
-// --------------------------
-const htmlElement = document.documentElement;
-const bodyElement = document.body;
-const height = Math.max(
-       htmlElement.clientHeight, htmlElement.scrollHeight, htmlElement.offsetHeight,
-       bodyElement.scrollHeight, bodyElement.offsetHeight
-   );
-// --------------------------
 const hamburger = document.querySelector(".fa");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 
@@ -55,13 +47,10 @@ function closeMenuFunc() {
 
 hamburger.addEventListener("click", hamburgerMenuDisplay);
 hamburgerMenu.style.marginTop = "-70px";
-//hamburger.style.marginLeft = "100px";
 for(let i = 0; i < menuItems.length; i++) {
-  //menuItems[i].style.marginBottom = "-50px";
   menuItems[i].style.marginBottom = "0.5em";
   menuItems[i].style.marginLeft = "1.5em";
 }
-
 
 function hamburgerMenuDisplay() {
   if (hamburgerMenu.style.display === "block") {
@@ -75,8 +64,6 @@ function hamburgerMenuDisplay() {
     closeMenu.style.display = "block";
   }
 }
-
-
 
 let ok = 0;
 
