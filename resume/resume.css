@@ -30,18 +30,18 @@
 .menu li {
   margin-top: 2.5em;
   float: left;
-  padding-right: 4em;
+  padding-right: 2em;
   transition: 0.2s;
 }
 
 .menu li a {
   //font-size: 2.7vh;
-  font-size: 1.6em;
+  font-size: 1.3em;
   position: relative;
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 12px;
   text-decoration: none;
   color: #D3D3D3;
   opacity: 0.5;
@@ -91,7 +91,6 @@
 }
 
 .close-menu p{
-  //display: none;
   font-size: 25px;
   border-radius: 50%;
   border: 2px solid #E5E4E2;
@@ -142,15 +141,17 @@
 
 .header img {
   position: absolute;
-  margin: auto;
-  display: block;
-  max-width: 18em;
-  border-radius: 50%;
   top: 78%;
-  left: 43%;
+  //bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 18em;
+  border-radius: 50%;
   z-index: 1;
+  display: block;
   transition: 1.5s ease-in-out;
-
 }
 
 .header img:hover {
@@ -179,37 +180,37 @@
 
 .description {
   float:left;
-  max-width: 50em;
+  max-width: 55em;
   min-height: 55em;
   border: 10px solid #1D4350;
   border-radius: 30px;
   margin: 15em 10em;
   margin-right: 2em;
   margin-bottom: 10em;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .description p {
   //font-size: 3.5vh;
   font-size: 2.1em;
-  padding: 1.2em 1em;
+  padding: 1.2em 1.5em;
   //line-height: 65px;
   line-height: 2em;
   color: #E5E4E2;
 }
 
 .description button {
-  //font-size: 1.8vh;
+  padding:0.6em 2em;
+  border-radius: 8px;
+  color:#fff;
+  background-color: #1D4350; 
   font-size: 1.1em;
-  color: #E5E4E2;
-  font-weight: bold;
-  background: inherit;
-  width: 13em;
-  margin: 2em 5em;
-  border: 5px solid #E5E4E2;
-  border-radius: 10%;
-  padding: 1.5em;
   cursor: pointer;
-  transition: 2s;
+  margin: 1em;
+  width: 15em;
+  height: 3em;
+  margin: 1.5em 4em;
 }
 
 .description button:hover {
@@ -284,6 +285,65 @@ h1 {
   margin: 0 auto;
 }
 
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 7em;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  border:#A43931 4px solid;
+  border-radius: 5%;
+  max-width: 25%;
+  min-height: 35em;
+  margin: 0 auto;
+}
+
+.project a {
+  margin: 0 auto;
+}
+
+.projectName {
+  color:#D3D3D3;
+  font-size: 2.3em;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.projectDesc {
+  font-size: 1.4em;
+  padding: 1.2em 1.5em;
+  line-height: 2em;
+  color: #E5E4E2;
+  letter-spacing: .02em;
+  margin-top: 2em;
+}
+
+.projectBtn {
+  padding:0.6em 2em;
+  border-radius: 8px;
+  color:#fff;
+  background-color: #1D4350; 
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 1em;
+  width: 12em;
+  height: 2.8em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.projectBtn:hover {
+  background: -webkit-linear-gradient(-180deg, #A43931, #1D4350);
+  transition: 2s;
+
+}
+
 .contact {
   display: flex;
   flex-direction: row;
@@ -334,7 +394,7 @@ h1 {
   color: #E5E4E2;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1350px) {
   .description {
     margin: 15em 2em .5em;
     max-width: 100%;
@@ -347,9 +407,6 @@ h1 {
     float: left;
     margin: 5em auto;
     max-width: 55%;
-  }
-  .header img {
-    left: 10%;
   }
 
   .menu ul {
@@ -380,6 +437,21 @@ h1 {
     width: 80%;
   }
 
+  .projects {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .project {
+    max-width: 80%;
+    min-height: 20em;
+    border-radius: 2%;
+  }
+
+  .projectName {
+    margin-top: 1em;
+  }
+
 }
 
 @media only screen and (min-width: 1250px) {
@@ -407,6 +479,10 @@ h1 {
   .title {
     padding-top: 6em;
   }
+
+  .skill-bar {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -423,12 +499,22 @@ h1 {
     line-height: 1.7em;
   }
 
+  .header img {
+    top: 78%;
+    right: 70%;
+    left: 10%;
+  }
+
   .webimg {
     max-width: 80%;
   }
 
   .footer {
     width: 95%;;
+  }
+
+  .project {
+    max-width: 100%;
   }
 }
 
@@ -438,6 +524,7 @@ h1 {
   }
 
   .title {
-    padding-top: 1.7em;
+    padding-top: 1.8em;
   }
+
 }
